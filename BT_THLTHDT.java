@@ -16,7 +16,11 @@ public class BT_THLTHDT {
         while (choose != 0) {
             switch (choose) {
                 case 1:
-
+                    Scanner tt= new Scanner(System.in);
+                    System.out.print("Nhap ten cua ban: ");
+                    String name = tt.nextLine();
+                    System.out.println("Hello " + name);
+                    tt.close();
                     break;
 
                 case 2:
