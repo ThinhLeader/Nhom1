@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class BT_THLTHDT {
@@ -49,7 +50,17 @@ public class BT_THLTHDT {
                     break;
 
                 case 4:
+                    DecimalFormat df = new DecimalFormat("#.00");
+                    System.out.println("Nhap so tien gui");
+                    int tien_gui = sc.nextInt();
+                    System.out.println("Nhap lai suat (%): ");
+                    double lai_suat = sc.nextDouble()/100;
+                    System.out.println("Nhap so thang gui:");
+                    double thang = sc.nextDouble();
 
+                    double tien_goc =tien_gui*Math.pow((double)(1+lai_suat),thang/12);
+                    System.out.println("So tien lai la:"+(df.format(tien_goc-tien_gui)));
+                    System.out.println("Tien goc la:"+df.format(tien_goc));
                     break;
 
                 default:
